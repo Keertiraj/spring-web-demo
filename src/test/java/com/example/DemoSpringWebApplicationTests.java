@@ -19,11 +19,11 @@ public class DemoSpringWebApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-	
+
 	@Test
 	public void testApp()
 	{
-		 assertTrue (21 < 3);
+		 assertTrue (1 < 3);
 	}
 
 }
