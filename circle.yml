@@ -4,7 +4,7 @@ deployment:
   dockerhub:
       branch: master
           commands:
-        	- $DOCKER_HUB_SPRING_DEMO
+        	- $DOCKERHUB
 
 test:
   override:
