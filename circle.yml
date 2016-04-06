@@ -3,24 +3,11 @@
 machine:
   services:
     - docker
-
-dependencies:
-  cache_directories:
-    - "~/docker"
-  override:
-    - docker info
-    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t  keerti4p/spring-web-demo .
-    - mkdir -p ~/docker; docker save  keerti4p/spring-web-demo > ~/docker/image.tar
-
 deployment:
   dockerhub:
       branch: master
       commands:
-        - docker login -e keerti4p@gmail.com -u keerti4p -p sridevikrupa@4
-        - docker push keerti4p/spring-web-demo:latest
-
-
+        - $DOCKER_HUB_TRIGGER
 test:
   override:
     - mvn clean install
