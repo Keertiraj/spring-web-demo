@@ -13,8 +13,8 @@ deployment:
   dockerhub:
       branch: master
       commands:
-        - docker login -e keerti4p@gmail.com -u keerti4p -p sridevikrupa@4
-        - docker push keerti4p/spring-web-demo:latest
+        - docker login -e $email -u  $Username -p  $Password
+4444        - docker push keerti4p/spring-web-demo:latest
 
 
 test:
