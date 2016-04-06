@@ -1,5 +1,5 @@
 # The deployment section should be excluded until
-# it is explicitlay included in module 5.
+# it is esxplicitlay included in module 5.
 deployment:
   dockerhub:
       branch: master
