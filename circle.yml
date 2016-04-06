@@ -1,5 +1,18 @@
 # The deployment section should be excluded until
 # it is esxplicitlay included in module 5.
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+  override:
+    - docker info
+    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
+    - docker build -t  keerti4p/spring-web-demo .
+    - mkdir -p ~/docker; docker save  keerti4p/spring-web-demo > ~/docker/image.tar
+
 deployment:
   dockerhub:
       branch: master
