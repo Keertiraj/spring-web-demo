@@ -6,6 +6,8 @@ deployment:
     branch: master
       commands:
         - $DOCKER_HUB_SPRING_DEMO
+
 test:
   override:
     - mvn clean install
+
