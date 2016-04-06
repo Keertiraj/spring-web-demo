@@ -3,8 +3,8 @@
 deployment:
   dockerhub:
       branch: master
-          commands:
-        	- $DOCKERHUB
+      commands:
+        - $DOCKERHUB
 
 test:
   override:
